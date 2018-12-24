@@ -19,13 +19,16 @@ for movie in movie_data.movies:
 
 def main_page():
     """
-    Create the main page 
+    Create the main page
 
     Returns a Response Object with a list of movies sorted by title.
     """
     css = open(j('styles', 'main.css')).read()
     js = open(j('scripts', 'main.js')).read()
-    movie_page = page.Component('page', {'styles': css, 'js': js},  'page.html')
+    movie_page = page.Component(
+            'page',
+            {'styles': css, 'js': js},  'page.html'
+            )
     movie_list = page.Component(
             'movie_list',
             {'movies': ''},
@@ -46,6 +49,7 @@ def movie_page():
     """
     movie_page = page.Component()
     return Response(body=movie_page.render())
+
 
 def create_routes():
     """
