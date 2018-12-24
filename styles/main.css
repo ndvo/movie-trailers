@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+body{
+  background: #222;
+  margin: 0;
+}
+footer,
+header{
+  background: rgba(155, 0, 0);
+  padding: 50px;
+  margin-bottom: 30px;
+  text-align: center
+}
+header h1{
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  font-family: 'Staatliches';
+  font-size: 4em;
+  text-shadow: 0px 0px 4px black;
+}
+footer a,
+header a{
+  font-family: 'Staatliches';
+  color: white;
+  text-decoration: none;
+  margin: 3ch;
+}
+footer a:hover,
+header a:hover{
+  text-shadow: 0px 0px 4px black;
+}
+footer{
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+section.movies{
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #111;
+  box-shadow: 0 0 5px red;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+article.movie-trailer{
+  display: grid;
+  grid-template-areas: 
+   "header header header"
+   "body body body"
+   "story story action"
+   "info info action";
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background: #fefefe;
+  box-shadow: 0 0 5px white;
+  transition: all 0.3s;
+}
+article.movie-trailer .action{
+  border: outset red thin;
+  background: yellow;
+  border-radius: 5px;
+  padding: 1ch 3ch;
+  width: 6ch;
+  height: 3ch;
+  line-height: 3ch;
+  vertical-align: middle;
+  margin: auto 0 0 auto;
+  font-family: 'Staatliches';
+  letter-spacing: 3px;
+}
+article.movie-trailer .action:hover{
+  cursor: pointer;
+  box-shadow: 0 0 4px red;
+}
+article.movie-trailer:hover{
+  box-shadow: 0 0 20px yellow;
+}
+.movie-trailer h1{
+  grid-area: header;
+}
+.movie-trailer img{
+  grid-area: body;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.movie-trailer p{
+  grid-area: story;
+}
+.movie-trailer .rating{
+  grid-area: info;
+}
+
+.movie-trailer .action{
+  grid-area: action;
+}
+
+dialog{
+  display: block;
+  position: fixed;
+  z-index: 10;
+  top: -1000px;
+  transition: top 0.5s, opacity 1s;
+  opacity: 0;
+  box-shadow: 0 0 800px 650px rgba(0,0,0,0.8);
+}
+div.close{
+  padding: 1ch;
+  border: solid thin black;
+  border-radius: 50%;
+  position: absolute;
+  right: -50px;
+  height: 20px;
+  width: 20px;
+  top: 0;
+  cursor: pointer;
+  text-align: center;
+  z-index: 10;
+  background:white;
+}
+div.close:hover{
+  box-shadow: 0px 0px 6px black;
+}
