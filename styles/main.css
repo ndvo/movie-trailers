@@ -46,7 +46,7 @@ article.movie-trailer{
   grid-template-areas: 
    "header header header"
    "body body body"
-   "story story action"
+   "story story story"
    "info info action";
   width: 300px;
   margin: 20px;
@@ -89,6 +89,16 @@ article.movie-trailer:hover{
 }
 .movie-trailer .rating{
   grid-area: info;
+  color: red;
+  font-family: 'Staatliches';
+  font-size: 1.5em;
+  border: solid black thin;
+  display: inline-block;
+  width: 4ch;
+  height: 3ch;
+  line-height: 3ch;
+  text-align: center;
+  margin: auto auto 0 0;
 }
 
 .movie-trailer .action{
